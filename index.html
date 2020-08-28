@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Probability Calculator</title>
+  <link rel='stylesheet' href='styles.css'>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container main">
+  <div class="row">
+  <div class="col s12 m8 offset-m2">
+  <div class="card" id="card">
+  <div class="card-content">
+    <div class='incomplete'>Please fill all the fields with the appropriate values</div>
+    <h3>Chance of Admission calculator</h3>
+    <br>
+    <form action="">
+
+      <div class='input-field'>
+      <p class='explain' style='display: none;'>Enter your CGPA/CPI out of 10 points. If your university follows a 5-point system, simply double your CGPA/CPI</p>
+      <input type="text" id="cgpa" class='validate' placeholder="Enter your CGPA" required>
+      <label for="cgpa" class='black-text'><strong>CGPA (out of 10)</strong>  <a href='#'><i class="fa fa-question-circle doubt"></i></a></label>
+      </div>
+      <br>
+
+      <div class='input-field'>
+      <p class='explain' style='display: none;'>Enter your GRE Score out of 340 points</p>
+      <input type="text" id="gre" class='validate' placeholder="Enter your GRE Score" required>
+      <label for="gre" class='black-text'><strong>GRE Score (out of 340)</strong>  <a href='#'><i class="fa fa-question-circle doubt"></i></a></label>
+      </div>
+      <br>
+
+      <div class='input-field'>
+      <p class='explain' style='display: none;'>Enter your TOEFL Score out of 120 points</p>
+      <input type="text" id="toefl" class='validate' placeholder="Enter your TOEFL Score" required>
+      <label for="toefl" class='black-text'><strong>TOEFL Score (out of 120)</strong>  <a href='#'><i class="fa fa-question-circle doubt"></i></a></label>
+      </div>
+      <br>
+
+      <label for="gre" class='black-text'><strong>Do you have any prior research experience?</strong></label>
+      <br>
+      <label class='black-text'>
+      <input type="radio" name='resex'>
+      <span>Yes</span>
+      </label>
+      <label class='black-text'>
+      <input type="radio" name='resex'>
+      <span>No</span>
+      </label>
+      <br><br><br>
+
+      <div class='input-field' id='sop'>
+        <p class='explain' style='display: none;'>Choose how strong you feel your SOP rating is; a higher value is better. If you don't think you have a precise idea or haven't prepared an SOP yet, try out a few values and get an idea of how strong it needs to be for a good chance of admission!</p>
+        <select class='selectsop'>
+          <option value="" disabled selected>Choose your SOP Rating</option>
+          <option value="1.0">1.0</option>
+          <option value="1.5">1.5</option>
+          <option value="2.0">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3.0">3.0</option>
+          <option value="3.5">3.5</option>
+          <option value="4.0">4.0</option>
+          <option value="4.5">4.5</option>
+          <option value="5.0">5.0</option>
+        </select>
+        <label for="sop" class='black-text'><strong>SOP Rating</strong>  <a href='#'><i class="fa fa-question-circle doubt"></i></a></label>
+      </div>
+      <br>
+
+      <div class='input-field' id='lor'>
+        <p class='explain' style='display: none;'>Choose how strong you feel your LOR rating is; a higher value is better. If you don't think you have a precise idea or haven't prepared an LOR yet, try out a few values and get an idea of how strong it needs to be for a good chance of admission!</p>
+        <select class='selectlor'>
+          <option value="" disabled selected>Choose your LOR Rating</option>
+          <option value="1.0">1.0</option>
+          <option value="1.5">1.5</option>
+          <option value="2.0">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3.0">3.0</option>
+          <option value="3.5">3.5</option>
+          <option value="4.0">4.0</option>
+          <option value="4.5">4.5</option>
+          <option value="5.0">5.0</option>
+        </select>
+        <label for="lor" class='black-text'><strong>LOR rating</strong>  <a href='#'><i class="fa fa-question-circle doubt"></i></a></label>
+      </div>
+      <br>
+
+      <div class='input-field' id='univ'>
+        <p class='explain' style='display: none;'>Choose how well-known an institute you wish to apply for; a higher value means a more reputed university. If you haven't decided which kinds of universities to apply to, play around a bit with the values and check the chance of admission!</p>
+        <select class='selectuniv'>
+          <option value="" disabled selected>Choose your University Rating</option>
+          <option value="1.0">1.0</option>
+          <option value="2.0">2.0</option>
+          <option value="3.0">3.0</option>
+          <option value="4.0">4.0</option>
+          <option value="5.0">5.0</option>
+        </select>
+        <label for="univ" class='black-text'><strong>University rating</strong>  <a href='#'><i class="fa fa-question-circle doubt"></i></a></label>
+        
+      </div>
+      <br><br>
+      <a class="waves-effect waves-light btn" href="#">Calculate my chance of Admission</a>
+    </form>
+    <div class='result'>Your Chance of Admission according to our model is: <br><span class='chance'>90%</span></div>
+  </div>  
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+    <div class="col s12 l6 footerloc">
+      Created by the Data Analytics and Visualization Team 2020-21, IIT Bombay
+    </div>
+    </div>
+  </footer>
+  <script src='app.js'></script>
+</body>
+</html>
