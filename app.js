@@ -51,11 +51,11 @@ submit.addEventListener('click', function() {
   if (!entry.gre) ava = false;
 
   entry["toefl"] = Number(document.querySelector('#toefl').value);
-  if (entry["toefl"] > 340) entry["toefl"] = 0;
+  if (entry["toefl"] > 120) entry["toefl"] = 0;
   if (!entry["toefl"]) ava = false;
 
   entry["cgpa"] = Number(document.querySelector('#cgpa').value);
-  if (entry["cgpa"] > 340) entry["cgpa"] = 0;
+  if (entry["cgpa"] > 10) entry["cgpa"] = 0;
   if (!entry["cgpa"]) ava = false;
   
   entry["resex"] = -1;
